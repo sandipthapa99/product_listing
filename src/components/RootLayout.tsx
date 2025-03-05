@@ -11,9 +11,10 @@ const RootLayout: React.FC = () => {
         <div className='container mx-auto p-4 flex justify-between items-center'>
           <Link
             to={'/'}
-            className='font-semibold text-lg sm:text-2xl md:text-3xl text-grey-500'
+            className='font-semibold text-xl sm:text-2xl md:text-3xl text-grey-500 flex items-center gap-2'
           >
-            Marketplace
+            <img src='/store.png' className='h-6 sm:h-8' alt='logo' />{' '}
+            <span>Marketplace</span>
           </Link>
         </div>
       </header>
