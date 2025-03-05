@@ -7,18 +7,18 @@ const RootLayout: React.FC = () => {
 
   return (
     <div className='min-h-screen flex flex-col bg-gray-100'>
-      <header className='border-b border-muted flex items-center'>
-        <div className='container mx-auto px-4 flex justify-between items-center py-2'>
+      <header className='border-b border-muted flex items-center justify-center bg-white sticky top-0 z-10 shadow-sm'>
+        <div className='container mx-auto p-4 flex justify-between items-center'>
           <Link
             to={'/'}
-            className='font-semibold text-lg sm:text-2xl md:text-3xl text-blue-600'
+            className='font-semibold text-lg sm:text-2xl md:text-3xl text-grey-500'
           >
             Marketplace
           </Link>
         </div>
       </header>
-      <main className='flex-grow container mx-auto px-4 pb-5'>
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6 relative h-full'>
+      <main className='flex-grow container mx-auto mt-6 px-4 pb-5'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-6 relative h-full'>
           <div className='lg:col-span-7 order-2 lg:order-1'>
             <Outlet />
           </div>

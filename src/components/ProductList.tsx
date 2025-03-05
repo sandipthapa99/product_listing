@@ -143,7 +143,7 @@ const ProductList = ({ selectedId }: { selectedId?: string }) => {
               id='category'
               value={filterCategory}
               onChange={(e) => setFilterCategory(e.target.value)}
-              className='cursor-pointer capitalize w-full p-2 border appearance-none rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+              className='truncate cursor-pointer capitalize w-full p-2 pr-6 border appearance-none rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
             >
               <option value=''>All Categories</option>
               {categories.map((category) => (
@@ -166,7 +166,7 @@ const ProductList = ({ selectedId }: { selectedId?: string }) => {
               id='brand'
               value={filterBrand}
               onChange={(e) => setFilterBrand(e.target.value)}
-              className='w-full p-2 appearance-none border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+              className='w-full p-2 pr-6 appearance-none border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 truncate'
             >
               <option value=''>All Brands</option>
               {brands.map((brand) => (

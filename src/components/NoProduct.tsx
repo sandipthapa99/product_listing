@@ -3,7 +3,7 @@ import type React from 'react';
 
 const NoProduct: React.FC = () => {
   return (
-    <div className='sticky top-3 bg-primary-foreground p-6 rounded-lg shadow-md h-[calc(100vh-90px)] flex flex-col items-center justify-center text-center'>
+    <div className='sticky top-24 bg-primary-foreground p-6 rounded-lg shadow-md h-[calc(100vh-120px)]  flex-col items-center justify-center text-center hidden lg:flex'>
       <FolderOpen size={60} />
       <h2 className='text-xl font-semibold mb-2 mt-4'>No Product Selected</h2>
       <p className='text-muted-foreground'>
