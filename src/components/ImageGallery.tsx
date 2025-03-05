@@ -50,13 +50,16 @@ const ImageGallery = ({ images }: { images: string[] }) => {
   return (
     <div className='relative space-y-4 w-full h-full'>
       <Carousel setApi={setApi} className='w-full'>
-        <CarouselContent className='h-64 sm:h-80 md:h-96 '>
+        <CarouselContent className='h-64 sm:h-80 md:h-96 relative'>
           {images.map((image, index) => (
-            <CarouselItem key={`${image}-${index}`}>
+            <CarouselItem
+              key={`${image}-${index}`}
+              className='relative w-full h-full flex items-center justify-center'
+            >
               <img
                 src={image || '/placeholder.png'}
                 alt={image}
-                className='w-full h-full object-contain'
+                className='h-full object-contain'
                 loading='lazy'
               />
             </CarouselItem>
