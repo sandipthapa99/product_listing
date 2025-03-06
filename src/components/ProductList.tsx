@@ -26,10 +26,10 @@ const ProductList = ({ selectedId }: { selectedId?: string }) => {
 
   // Get unique categories & brands and sort aplhabetically
   const categories = Array.from(
-    new Set(products.map((product) => product.category))
+    new Set(products.map((product) => product.category).filter(Boolean))
   ).sort((a, b) => a.localeCompare(b));
   const brands = Array.from(
-    new Set(products.map((product) => product.brand))
+    new Set(products.map((product) => product?.brand).filter(Boolean))
   ).sort((a, b) => a.localeCompare(b));
 
   useEffect(() => {
@@ -217,7 +217,7 @@ const ProductList = ({ selectedId }: { selectedId?: string }) => {
           <div className='text-sm text-gray-500'>
             Showing {indexOfFirstProduct + 1}-
             {Math.min(indexOfLastProduct, filteredProducts.length)} of{' '}
-            {filteredProducts.length} products
+            {filteredProducts.length}
           </div>
           <div className='flex items-center gap-2'>
             <button
